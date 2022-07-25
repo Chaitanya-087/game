@@ -79,7 +79,11 @@ const XOGrid = () => {
       winner &&
     <div className="message-wrapper">
       <div className="win-message">
-        <p className="msg">{winner === player ? 'you' : 'cpu'} won !</p>
+        <p className="msg">
+        {
+          winner === 'draw' ? 'draw' : winner === player ? 'you win' : 'you lose'
+        }
+        </p>
         <p className={"player-info"} style = {{color: 'rgb(53, 199, 192)' }} >
           <span>{winner === player ? player : ai}</span> takes the round
         </p>
