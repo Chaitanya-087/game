@@ -53,7 +53,7 @@ const XOGrid = () => {
     <div className={"grid " + player}>
       {
         board.map((element,index) => {
-          return <div key={index} style={{pointerEvents:winner ? "none":"all"}}className={"element " + element} onClick={() => gameStep(index)}></div>
+          return <div key={index} style={{pointerEvents:winner ? "none":"all"}} className={"element " + element} onClick={() => gameStep(index)}></div>
         })
       }
     </div>
@@ -81,11 +81,11 @@ const XOGrid = () => {
       <div className="win-message">
         <p className="msg">
         {
-          winner === 'draw' ? 'draw' : winner === player ? 'you win' : 'you lose'
+          winner === 'draw' ? 'draw' : `${winner} wins`
         }
         </p>
         <p className={"player-info"} style = {{color: 'rgb(53, 199, 192)' }} >
-          <span>{winner === player ? player : ai}</span> takes the round
+          {winner === 'draw' ? 'it was a draw' : `${winner} takes the round`}
         </p>
         <div className="btns-container">
           <Link className="quit" to="/game">quit</Link>

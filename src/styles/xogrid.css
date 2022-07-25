@@ -130,6 +130,7 @@
     cursor: not-allowed;
     pointer-events: none;
   }
+  
   .stats-container{
     display: grid;
     gap: 1rem;
