@@ -4,7 +4,7 @@ import { useXo } from '../helper/xoContext'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 const XOpage = () => {
-  const { setPlayer,choice} = useXo()
+  const { setPlayer, choice } = useXo()
 
   const [active1, setActive1] = useState(false)
   const [active2, setActive2] = useState(true)
@@ -44,10 +44,10 @@ const XOpage = () => {
         </div>
       </div>
       <div className='btn-container'>
-        <Link to ='/xo' >
-        <button className='btn-vsplayer' onClick={() => choice('PLAYER')}>new game (vs player)</button>
+        <Link to='/game/xo' >
+          <button className='btn-vsplayer' onClick={() => choice('PLAYER')}>new game (vs player)</button>
         </Link>
-        <Link to='/xo'> 
+        <Link to='/game/xo'>
           <button className='btn-cpu' onClick={() => choice("CPU")}>new game (vs cpu)</button>
         </Link>
       </div>

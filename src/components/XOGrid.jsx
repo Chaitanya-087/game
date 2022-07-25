@@ -84,7 +84,7 @@ const XOGrid = () => {
           <span>{winner === player ? player : ai}</span> takes the round
         </p>
         <div className="btns-container">
-          <Link className="quit" to="/">quit</Link>
+          <Link className="quit" to="/game">quit</Link>
           <button className="nextround" onClick={reset}>next round</button>
         </div>
       </div>
