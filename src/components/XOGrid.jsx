@@ -53,7 +53,7 @@ const XOGrid = () => {
     <div className={"grid " + player}>
       {
         board.map((element,index) => {
-          return <div key={index} style={{pointerEvents:winner ? "none":"all"}} className={"element " + element} onClick={() => gameStep(index)}></div>
+          return <button key={index}  disabled={element && true} className={"element " + element} onClick={() => gameStep(index)}></button>
         })
       }
     </div>
@@ -88,7 +88,7 @@ const XOGrid = () => {
           {winner === 'draw' ? 'it was a draw' : `${winner} takes the round`}
         </p>
         <div className="btns-container">
-          <Link className="quit" to="/game">quit</Link>
+          <Link className="quit" to="/">quit</Link>
           <button className="nextround" onClick={reset}>next round</button>
         </div>
       </div>

@@ -44,10 +44,10 @@ const XOpage = () => {
         </div>
       </div>
       <div className='btn-container'>
-        <Link to='/game/xo' >
+        <Link to='/xo' >
           <button className='btn-vsplayer' onClick={() => choice('PLAYER')}>new game (vs player)</button>
         </Link>
-        <Link to='/game/xo'>
+        <Link to='/xo'>
           <button className='btn-cpu' onClick={() => choice("CPU")}>new game (vs cpu)</button>
         </Link>
       </div>

@@ -92,6 +92,7 @@
     box-shadow: 0 5px 0 #0e212a;
     cursor: pointer;
     position: relative;
+    border: none;
   }
 
   .element.x::after,
@@ -125,12 +126,6 @@
     box-shadow: 0 0 0 10px #f3b236;
   }
 
-  .element.x,
-  .element.o {
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-  
   .stats-container{
     display: grid;
     gap: 1rem;
